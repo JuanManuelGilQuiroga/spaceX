@@ -5,6 +5,8 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     border: 0.5px solid black;
+    background: var(--color--one);
+    color: var(--color--five);
 }
 body{
     height: 100vh;
@@ -46,6 +48,22 @@ body{
     "aside-left-7"
     ".";
 }
+.main__aside__left i{
+    font-size: 2rem;
+    color: var(--color--two);
+}
+.aside__left__4 i{
+    color: var(--color--seven)
+}
+.aside__left__4 p{
+    color: var(--color--five)
+}
+.aside__left__6 i{
+    color: var(--color--eight)
+}
+.aside__left__6 p{
+    color: var(--color--five)
+}
 .main__aside__left > div {
     display: flex;
     flex-direction: row;
@@ -75,7 +93,11 @@ body{
 .aside__left__div{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
+}
+.aside__left__div *{
+    margin: 5px;
+    color: var(--color--two);
 }
 
 .main__section{
@@ -165,18 +187,30 @@ body{
     justify-content: center;
     align-items: center;
 }
-.footer__section{
+.footer__nav{
+    padding: 0 10%;
     grid-area: footer__section;
+    border: 1px solid red;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer__nav > div{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.footer__nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.footer__nav i{
+    font-size: 2rem;
+}
+.footer__nav small{
+    margin-top: 5%;
+    color: var(--color--two);
+}
+.footer__nav__1 small{
+    color: var(--color--five11);
 }
 .footer__aside__right{
     grid-area: footer__aside__right;
