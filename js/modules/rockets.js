@@ -141,3 +141,45 @@ export const getRocketSecondStageCompositeFairingHeightTotal  = async() =>{
     let {docs:[{second_stage:{payloads:{composite_fairing:{height}}}}]} = await res.json();
     return height;
 }
+
+export const getAllRocketEngineTotal = async()=>{
+    let config={
+        headers: {
+            "content-type": "application/json"
+        },
+        method: "POST",
+        body: JSON.stringify({
+            "select":{
+                "name": 1,
+                "engines": 1
+            },
+            "sort": {
+                "engines.thrust_sea_level": "desc"
+            }
+        })
+    }
+    let res = await fetch("https://api.spacexdata.com/v4/rockets/query", config);
+    let {docs:[{engines:{thrust_sea_level}}]} = await res.json();
+    return thrust_sea_level;
+}
+
+export const getAllRocketEngineThrustVacuumTotal = async()=>{
+    let config={
+        headers: {
+            "content-type": "application/json"
+        },
+        method: "POST",
+        body: JSON.stringify({
+            "select":{
+                "name": 1,
+                "engines": 1
+            },
+            "sort": {
+                "engines.thrust_vacuum": "desc"
+            }
+        })
+    }
+    let res = await fetch("https://api.spacexdata.com/v4/rockets/query", config);
+    let {docs:[{engines:{thrust_vacuum}}]} = await res.json();
+    return thrust_vacuum;
+}
