@@ -50,8 +50,7 @@ export const getRocketPayloadWeightsTotal  = async() =>{
         })
     }
     let res = await fetch("https://api.spacexdata.com/v4/rockets/query", config);
-    let {docs:[{payload_weights:{kg}}]} = await res.json;
-    console.log(payload_weights)
+    let {docs:[{payload_weights}]} = await res.json();
     return payload_weights;
 }
 
@@ -73,8 +72,8 @@ export const getRocketHeightTotal  = async() =>{
         })
     }
     let res = await fetch("https://api.spacexdata.com/v4/rockets/query", config);
-    let {docs:[{height:{meters}}]} = sombrero;
-    return sombrero
+    let {docs:[{height}]} = await res.json();
+    return height
 }
 
 export const getRocketDiameterTotal  = async() =>{
@@ -95,8 +94,8 @@ export const getRocketDiameterTotal  = async() =>{
         })
     }
     let res = await fetch("https://api.spacexdata.com/v4/rockets/query", config);
-    let {docs:[{height:{meters}}]} = sombrero;
-    return sombrero
+    let {docs:[{diameter}]} = await res.json();
+    return diameter;
 }
 
 export const getRocketSecondStageCompositeFairingDiameterTotal  = async() =>{
@@ -117,8 +116,8 @@ export const getRocketSecondStageCompositeFairingDiameterTotal  = async() =>{
         })
     }
     let res = await fetch("https://api.spacexdata.com/v4/rockets/query", config);
-    let {docs:[{second_stage:{payloads:{composite_fairing:{diameter:{meters}}}}}]} = sombrero;
-    return sombrero;
+    let {docs:[{second_stage:{payloads:{composite_fairing:{diameter}}}}]} = await res.json();
+    return diameter;
 }
 
 export const getRocketSecondStageCompositeFairingHeightTotal  = async() =>{
@@ -139,6 +138,6 @@ export const getRocketSecondStageCompositeFairingHeightTotal  = async() =>{
         })
     };
     let res = await fetch("https://api.spacexdata.com/v4/rockets/query", config);
-    let {docs:[{second_stage:{payloads:{composite_fairing:{height:{meters}}}}}]} = sombrero;
-    return sombrero;
+    let {docs:[{second_stage:{payloads:{composite_fairing:{height}}}}]} = await res.json();
+    return height;
 }
