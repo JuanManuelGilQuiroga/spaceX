@@ -40,7 +40,6 @@ export const getRocketPayloadWeightsTotal  = async() =>{
         method: "POST",
         body: JSON.stringify({
             "select":{
-                "name": 1,
                 "payload_weights": 1
             },
             "sort":{
@@ -62,7 +61,6 @@ export const getRocketHeightTotal  = async() =>{
         method: "POST",
         body: JSON.stringify({
             "select": {
-                "name": 1,
                 "height": 1
             },
             "sort": {
@@ -84,7 +82,6 @@ export const getRocketDiameterTotal  = async() =>{
         method: "POST",
         body: JSON.stringify({
             "select": {
-                "name": 1,
                 "diameter": 1
             },
             "sort": {
@@ -106,7 +103,6 @@ export const getRocketSecondStageCompositeFairingDiameterTotal  = async() =>{
         method: "POST",
         body: JSON.stringify({
             "select": {
-                "name": 1,
                 "second_stage.payloads.composite_fairing.diameter": 1
             },
             "sort": {
@@ -128,7 +124,6 @@ export const getRocketSecondStageCompositeFairingHeightTotal  = async() =>{
         method: "POST",
         body: JSON.stringify({
             "select": {
-                "name": 1,
                 "second_stage.payloads.composite_fairing.height": 1
             },
             "sort": {
@@ -150,7 +145,6 @@ export const getAllRocketEngineTotal = async()=>{
         method: "POST",
         body: JSON.stringify({
             "select":{
-                "name": 1,
                 "engines": 1
             },
             "sort": {
@@ -171,7 +165,6 @@ export const getAllRocketEngineThrustVacuumTotal = async()=>{
         method: "POST",
         body: JSON.stringify({
             "select":{
-                "name": 1,
                 "engines": 1
             },
             "sort": {
