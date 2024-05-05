@@ -21,7 +21,7 @@ export const informRocketEngineThrustSeaLevel = async(thrust__sea__level)=>{
     let lastSmall = document.createElement("small");
     let numKn = new Intl.NumberFormat("cop").format(thrust__sea__level.kN);
     let numLbf = new Intl.NumberFormat("cop").format(thrust__sea__level.lbf);
-    lastSmall.innerHTML(`${numKn} kN <br> ${numLbf} lbf`);
+    lastSmall.innerHTML=`${numKn} kN <br> ${numLbf} lbf`;
 
     firstDivChild.append(strong, firstSmall, lastSmall);
     firstDiv.append(firstDivChild);
@@ -58,7 +58,7 @@ export const informRocketEngineThrustVacuum = async(thrust_vacuum)=>{
     let lastSmall = document.createElement("small");
     let numKn = new Intl.NumberFormat("cop").format(thrust_vacuum.kN);
     let numLbf = new Intl.NumberFormat("cop").format(thrust_vacuum.lbf);
-    lastSmall.innerHTML(`${numKn} kN <br> ${numLbf} lbf`);
+    lastSmall.innerHTML=`${numKn} kN <br> ${numLbf} lbf`;
 
     firstDivChild.append(strong, firstSmall, lastSmall);
     firstDiv.append(firstDivChild);

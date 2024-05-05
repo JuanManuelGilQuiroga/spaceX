@@ -36,8 +36,8 @@ const getRocketsId = async(e)=>{
     }
     e.target.classList.add('activo');
     
-    let aside__right__section1 = document.querySelector("#aside__right__section1");
-    aside__right__section1.innerHTML = "";
+    let main__aside__right = document.querySelector("#main__aside__right");
+    main__aside__right.innerHTML = "";
     let main__aside__left = document.querySelector("#main__aside__left")
     main__aside__left.innerHTML = "";
     let section__image = document.querySelector("#section__image")
@@ -54,7 +54,7 @@ const getRocketsId = async(e)=>{
 
     await informRocketEngineThrustSeaLevel(Rocket.engines.thrust_sea_level);
     await informRocketEngineThrustVacuum(Rocket.engines.thrust_vacuum);
-    await imageRockets(Rocket.flickr_images);
+    await imageRockets(Rocket);
 
     await progressRocketWeight(Rocket)
     await progressPayloadWeights(Rocket)
@@ -67,7 +67,7 @@ export const paginationRockets = async()=>{
     let rockets = await getAllRockets();
     let div = document.createElement("div");
     div.classList.add("buttom__paginacion")
-  
+
     rockets.forEach((val,id) => {
         let a = document.createElement("a");
         a.setAttribute("href","#");

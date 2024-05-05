@@ -15,7 +15,7 @@ export const progressRocketWeight = async(Rockets)=>{
         information__container.classList.add("information__container");
         let first__div = document.createElement("div");
         let label = document.createElement("label");
-        label.textContent("Rocket Weight:");
+        label.textContent= "Rocket Weight:";
 
         let progress = document.createElement("progress");
         progress.max=kg;
@@ -26,7 +26,7 @@ export const progressRocketWeight = async(Rockets)=>{
         let span = document.createElement("span")
         let numKg = new Intl.NumberFormat("cop").format(val.mass.kg);
         let numLb = new Intl.NumberFormat("cop").format(val.mass.lb);
-        span.innerHTML(`${numKg} kg <br> ${numLb} lb`);
+        span.innerHTML=`${numKg} kg <br> ${numLb} lb`;
         
         first__div.append(label);
         first__div.append(progress);
@@ -35,8 +35,8 @@ export const progressRocketWeight = async(Rockets)=>{
         information__container.append(last__div);
         contDiv.push(information__container);
     })
-    let aside__right__section1 = document.querySelector('#aside__right__section1')
-    aside__right__section1.append( ...contDiv)
+    let main__aside__right = document.querySelector('#main__aside__right')
+    main__aside__right.append( ...contDiv)
      // <div class="information__container">
     //     <div>
     //         <label>Totle :</label>
@@ -56,10 +56,10 @@ export const progressPayloadWeights = async(Rockets)=>{
         information__container.classList.add("information__container");
         let first__div = document.createElement("div");
         let label = document.createElement("label");
-        label.textContent("Low earth orbit");
+        label.textContent="Low earth orbit";
 
         let progress = document.createElement("progress");
-        progress.max = kg;
+        progress.max=kg;
         progress.value = `${val.kg}`;
         progress.textContent = `${val.kg}%`;
 
@@ -67,17 +67,17 @@ export const progressPayloadWeights = async(Rockets)=>{
         let span = document.createElement("span");
         let numKg = new Intl.NumberFormat("cop").format(val.kg);
         let numLb = new Intl.NumberFormat("cop").format(val.lb);
-        span.innerHTML(`${numKg} kg <br> ${numLb} lb`);
+        span.innerHTML=`${numKg} kg <br> ${numLb} lb`;
 
         first__div.append(label);
         first__div.append(progress);
         last__div.append(span);
         information__container.append(first__div);
-        information__container,append(last__div)
+        information__container.append(last__div)
         contDiv.push(information__container);
     })
-    let aside__right__section1 = document.querySelector('#aside__right__section1')
-    aside__right__section1.append( ...contDiv)
+    let main__aside__right = document.querySelector('#main__aside__right')
+    main__aside__right.append( ...contDiv)
     // <div class="information__container">
     //     <div>
     //         <label>Totle :</label>
@@ -97,7 +97,7 @@ export const progressHeightRocket = async(Rockets)=>{
         information__container.classList.add("information__container");
         let first__div = document.createElement("div");
         let label = document.createElement("label");
-        label.textContent("Rocket Height");
+        label.textContent="Rocket Height";
 
         let progress = document.createElement("progress");
         progress.max = meters;
@@ -108,17 +108,17 @@ export const progressHeightRocket = async(Rockets)=>{
         let span = document.createElement("span");
         let numMeters = new Intl.NumberFormat("cop").format(val.meters);
         let numFeet = new Intl.NumberFormat("cop").format(val.feet);
-        span.innerHTML(`${numMeters} M <br> ${numFeet} F`);
+        span.innerHTML=`${numMeters} M <br> ${numFeet} F`;
 
         first__div.append(label);
         first__div.append(progress);
         last__div.append(span);
         information__container.append(first__div);
-        information__container,append(last__div)
+        information__container.append(last__div)
         contDiv.push(information__container);
     })
-    let aside__right__section1 = document.querySelector('#aside__right__section1')
-    aside__right__section1.append( ...contDiv)
+    let main__aside__right = document.querySelector('#main__aside__right')
+    main__aside__right.append( ...contDiv)
 }
 
 export const progressDiameterRocket = async(Rockets)=>{
@@ -129,7 +129,7 @@ export const progressDiameterRocket = async(Rockets)=>{
         information__container.classList.add("information__container");
         let first__div = document.createElement("div");
         let label = document.createElement("label");
-        label.textContent("Rocket Diameter");
+        label.textContent="Rocket Diameter";
 
         let progress = document.createElement("progress");
         progress.max = meters;
@@ -140,17 +140,17 @@ export const progressDiameterRocket = async(Rockets)=>{
         let span = document.createElement("span");
         let numMeters = new Intl.NumberFormat("cop").format(val.meters);
         let numFeet = new Intl.NumberFormat("cop").format(val.feet);
-        span.innerHTML(`${numMeters} M <br> ${numFeet} F`);
+        span.innerHTML=`${numMeters} M <br> ${numFeet} F`;
 
         first__div.append(label);
         first__div.append(progress);
         last__div.append(span);
         information__container.append(first__div);
-        information__container,append(last__div)
+        information__container.append(last__div)
         contDiv.push(information__container);
     })
-    let aside__right__section1 = document.querySelector('#aside__right__section1')
-    aside__right__section1.append( ...contDiv)
+    let main__aside__right = document.querySelector('#main__aside__right')
+    main__aside__right.append( ...contDiv)
 }
 
 export const progressSecondStageDiameterRocket = async(Rockets)=>{
@@ -161,7 +161,7 @@ export const progressSecondStageDiameterRocket = async(Rockets)=>{
         information__container.classList.add("information__container");
         let first__div = document.createElement("div");
         let label = document.createElement("label");
-        label.textContent("Diameter Rocket Shield");
+        label.textContent="Diameter Rocket Shield";
 
         let progress = document.createElement("progress");
         progress.max = meters;
@@ -172,17 +172,17 @@ export const progressSecondStageDiameterRocket = async(Rockets)=>{
         let span = document.createElement("span");
         let numMeters = new Intl.NumberFormat("cop").format(val.meters);
         let numFeet = new Intl.NumberFormat("cop").format(val.feet);
-        span.innerHTML(`${numMeters} M <br> ${numFeet} F`);
+        span.innerHTML=`${numMeters} M <br> ${numFeet} F`;
 
         first__div.append(label);
         first__div.append(progress);
         last__div.append(span);
         information__container.append(first__div);
-        information__container,append(last__div)
+        information__container.append(last__div)
         contDiv.push(information__container);
     })
-    let aside__right__section2 = document.querySelector('#aside__right__section2')
-    aside__right__section2.append( ...contDiv)
+    let main__aside__right = document.querySelector('#main__aside__right')
+    main__aside__right.append( ...contDiv)
 }
 
 export const progressSecondStageHeightRocket = async(Rockets)=>{
@@ -193,7 +193,7 @@ export const progressSecondStageHeightRocket = async(Rockets)=>{
         information__container.classList.add("information__container");
         let first__div = document.createElement("div");
         let label = document.createElement("label");
-        label.textContent("Height Rocket Shield");
+        label.textContent="Height Rocket Shield";
 
         let progress = document.createElement("progress");
         progress.max = meters;
@@ -204,15 +204,15 @@ export const progressSecondStageHeightRocket = async(Rockets)=>{
         let span = document.createElement("span");
         let numMeters = new Intl.NumberFormat("cop").format(val.meters);
         let numFeet = new Intl.NumberFormat("cop").format(val.feet);
-        span.innerHTML(`${numMeters} M <br> ${numFeet} F`);
+        span.innerHTML =`${numMeters} M <br> ${numFeet} F`;
 
         first__div.append(label);
         first__div.append(progress);
         last__div.append(span);
         information__container.append(first__div);
-        information__container,append(last__div)
+        information__container.append(last__div)
         contDiv.push(information__container);
     })
-    let aside__right__section2 = document.querySelector('#aside__right__section2')
-    aside__right__section2.append( ...contDiv)
+    let main__aside__right = document.querySelector('#main__aside__right')
+    main__aside__right.append( ...contDiv)
 }
