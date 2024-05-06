@@ -6,7 +6,6 @@ import {
 export const informRocketEngineThrustSeaLevel = async(thrust__sea__level)=>{
     let {kN:totalKN} = await getAllRocketEngineTotal();
     let porcentaje = (thrust__sea__level.kN * 100)/totalKN;
-
     let divGeneral = document.createElement("div");
     divGeneral.classList.add("carousel__item");
     let firstDiv = document.createElement("div");

@@ -148,14 +148,13 @@ body{
     grid-template-rows: 1fr 1.3fr;
     grid-template-areas:
     "carusel__colum__1"
-    ".";
+    "table__colum__1";
 }
 .section__information__2 div:first-child {
     grid-area: carusel__colum__1;
     display: flex;
     overflow-x: auto;
     gap: 10px;
-    justify-content: space-evenly;
 }
 .section__information__2 div:first-child>.carousel__item{
     min-width: 48%;
@@ -163,9 +162,9 @@ body{
     justify-content: center;
     align-items: center;
 }
-/*.section__information__2 div:last-child{
+.section__information__2 div:last-child{
     grid-area: table__colum__1;
-}*/
+}
 .section__image{
     grid-area: column__2;
     display: flex;
@@ -177,8 +176,8 @@ body{
     margin: 0px 10px;
 }
 .section__image>.carrusel__image img{
-    width: 250px;
-    height: 160px;
+    width: 350px;
+    height: 190px;
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0px 0px 10px var(--color--one);
@@ -190,14 +189,13 @@ body{
     grid-template-rows: 1fr 1.3fr;
     grid-template-areas:
     "carusel__colum__3"
-    ".";
+    "table__colum__3";
 }
 .section__information__3 div:first-child {
     grid-area: carusel__colum__3;
     display: flex;
     overflow-x: auto;
     gap: 10px;
-    justify-content: space-evenly;
 }
 .section__information__3 div:first-child>.carousel__item{
     min-width: 48%;
@@ -205,9 +203,31 @@ body{
     justify-content: center;
     align-items: center;
 }
-/*.section__information__3 div:last-child{
+.section__information__3 div:last-child{
     grid-area: table__colum__3;
-}*/
+}
+.table{
+    display: flex;
+    flex-direction: column;
+}
+.table__title{
+    margin: 2% 5%;
+}
+.divDatos{
+    margin: 5%;
+    overflow-y: auto;
+}
+.divDatos > div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+.table *{
+    color: var(--color--five);
+}
+.table span{
+    color: var(--color--two);
+}
 
 
 .main__aside__right{
