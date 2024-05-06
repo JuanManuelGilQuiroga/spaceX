@@ -56,7 +56,7 @@ export const progressPayloadWeights = async(Rockets)=>{
         information__container.classList.add("information__container");
         let first__div = document.createElement("div");
         let label = document.createElement("label");
-        label.textContent="Low earth orbit";
+        label.textContent= `${val.name} :`;
 
         let progress = document.createElement("progress");
         progress.max=kg;

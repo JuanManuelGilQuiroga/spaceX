@@ -13,7 +13,7 @@ export const informRocketEngineThrustSeaLevel = async(thrust__sea__level)=>{
     firstDiv.classList.add("item__progress__bar");
     let firstDivChild = document.createElement("div");
     firstDivChild.classList.add("progress__value");
-    firstDiv.style = `background: radial-gradient(closest-side, #1d1f38 85%, transparent 85% 100%), conic-gradient(var(--color--three) ${porcentaje}%, transparent 0)`
+    firstDiv.style = `background: radial-gradient(closest-side, #1d1f38 90%, transparent 85% 100%), conic-gradient(var(--color--three) ${porcentaje}%, transparent 0)`
     let strong = document.createElement("strong");
     strong.textContent = "Atmospheric acceleration";
     let firstSmall = document.createElement("small");
@@ -50,7 +50,7 @@ export const informRocketEngineThrustVacuum = async(thrust_vacuum)=>{
     firstDiv.classList.add("item__progress__bar");
     let firstDivChild = document.createElement("div");
     firstDivChild.classList.add("progress__value");
-    firstDiv.style = `background: radial-gradient(closest-side, #1d1f38 85%, transparent 85% 100%), conic-gradient(var(--color--three) ${porcentaje}%, transparent 0)`
+    firstDiv.style = `background: radial-gradient(closest-side, #1d1f38 90%, transparent 85% 100%), conic-gradient(var(--color--three) ${porcentaje}%, transparent 0)`
     let strong = document.createElement("strong");
     strong.textContent = "Speed in space";
     let firstSmall = document.createElement("small");
