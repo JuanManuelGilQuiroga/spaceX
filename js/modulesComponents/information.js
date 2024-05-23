@@ -89,3 +89,4 @@ export const informationWebRocket = async(wikipedia)=>{
     let main__aside__left = document.querySelector("#main__aside__left");
     main__aside__left.append(description__container)
 }
+

@@ -1,4 +1,4 @@
-import { getAllRocketEngineTotal } from "./modules/rockets.js";
+
 import { 
     load,
     paginationCapsules,
@@ -9,7 +9,7 @@ import {
 let footerSelect = async(e, id)=>{
     e.preventDefault();
     await load();
-    let li = document.querySelectorAll(".footer ul li")
+    let li = document.querySelectorAll(".footer__nav ul li")
     for(let val of li){
         let [a] = val.children
         a.classList.remove('select');
@@ -34,5 +34,3 @@ capsules.addEventListener("click", async(e)=>{
     paginacion.append(await paginationCapsules())
 })
 
-
-capsules.click();

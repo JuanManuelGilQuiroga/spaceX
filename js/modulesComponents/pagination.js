@@ -170,10 +170,13 @@ export const paginationRockets = async()=>{
     return div;
 }
 
+import { getAllCapsules,getCapsulesId } from "../modules/capsules.js";
+import { infoCapsules1 } from "./informationCapsules.js";
+
 const getCapsulesId = async(e)=>{
     e.preventDefault();
     if(e.target.dataset.page){
-        let paginacion = document.querySelector("#paginacion");
+        let paginacion = document.querySelector("#footer__aside__right");
         paginacion.innerHTML = ""
         paginacion.append(await paginationCapsules(Number(e.target.dataset.page)))
     }
@@ -183,7 +186,16 @@ const getCapsulesId = async(e)=>{
     }
     e.target.classList.add('activo');
     
+    let main__aside__right = document.querySelector("#main__aside__right");
+    main__aside__right.innerHTML = "";
+    let main__aside__left = document.querySelector("#main__aside__left")
+    main__aside__left.innerHTML = "";
+    let section__image = document.querySelector("#section__image")
+    section__image.innerHTML = "";
 
+    let capsule = await getCapsulesId(e.target.id)
+
+    await infoCapsules1(capsule.id, capsule.type, capsule.last_update)
     // let Rocket = await getAllRocketsId(e.target.id);
     // console.log(Rocket);
 

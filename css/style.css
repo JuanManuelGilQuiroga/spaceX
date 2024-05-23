@@ -368,6 +368,9 @@ progress[value]::-moz-progress-bar {
 .footer__nav i{
     font-size: 2rem;
 }
+.footer__nav ul li:hover{
+    cursor: pointer;
+}
 .footer__nav small{
     margin-top: 5%;
     color: var(--color--two);
