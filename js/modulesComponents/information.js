@@ -89,3 +89,55 @@ export const informationWebRocket = async(wikipedia)=>{
     let main__aside__left = document.querySelector("#main__aside__left");
     main__aside__left.append(description__container)
 }
+
+//CAPSULES
+
+export const informationCapsules1 = async(id, type, update)=>{
+    let description__item = document.querySelector("#main__aside__left")
+    let div = document.createElement("div")
+    const style = `<link rel="stylesheet" href="../../css/report.css">`;
+    let content = `${style}`;
+    content +=`
+    <div class="containerComponente">
+        <div class="subtittle">
+            <i class='bx bxs-ghost' ></i>
+            <h3>Id: ${id}</h3>
+        </div>
+        <div>
+            <i class='bx bxs-ghost' ></i>
+            <p> <span>Type: </span> ${type}</p>
+        </div>
+        <div>
+            <i class='bx bxs-ghost' ></i>
+            <p><span>Last Update: </span> ${update}</p>
+        </div>
+    </div>
+    `
+    div.innerHTML =content
+    description__item.append(div)
+}
+
+export const informationCapsules2 = async(serial, water, status)=>{
+    let description__item = document.querySelector("#main__aside__right")
+    let div = document.createElement("div")
+    const style = `<link rel="stylesheet" href="../../css/report.css">`;
+    let content = `${style}`;
+    content +=`
+    <div class="containerComponente">
+        <div class="subtittle">
+            <i class='bx bxs-ghost' ></i>
+            <h3>Serial: ${serial}</h3>
+        </div>
+        <div>
+            <i class='bx bxs-ghost' ></i>
+            <p> <span>Water Landings: </span> ${water}</p>
+        </div>
+        <div>
+            <i class='bx bxs-ghost' ></i>
+            <p><span>Status: </span> ${status}</p>
+        </div>
+    </div>
+    `
+    div.innerHTML =content
+    description__item.append(div)
+}

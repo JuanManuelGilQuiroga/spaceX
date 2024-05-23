@@ -1,9 +1,24 @@
-import { getAllRocketEngineTotal } from "./modules/rockets.js";
 import { 
-    paginationRockets
+    paginationRockets,
+    paginationCapsules
 } from "./modulesComponents/pagination.js";
 
 
-let pagination = document.querySelector("#footer__aside__right");
-pagination.innerHTML = "";
-pagination.append(await paginationRockets())
+
+let paginacion = document.querySelector("#footer__aside__right");
+paginacion.innerHTML = ""
+paginacion.append(await paginationRockets())
+
+let rockets = document.querySelector("#rockets")
+rockets.addEventListener("click", async(e)=>{
+    e.preventDefault()
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationRockets())
+})
+
+let capsules = document.querySelector("#capsules")
+capsules.addEventListener("click", async(e)=>{
+    e.preventDefault()
+    paginacion.innerHTML = ""
+    paginacion.append(await paginationCapsules())
+})

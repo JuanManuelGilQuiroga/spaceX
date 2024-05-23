@@ -350,6 +350,22 @@ progress[value]::-moz-progress-bar {
     justify-content: center;
     align-items: center;
 }
+.footer__nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__nav ul>li{
+    display: flex;
+    flex-direction: column;
+}
+.footer__nav a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .footer__nav i{
     font-size: 2rem;
 }
