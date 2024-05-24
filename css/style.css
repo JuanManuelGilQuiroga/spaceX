@@ -348,7 +348,7 @@ progress[value]::-moz-progress-bar {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 .footer__nav ul{
     width: 100%;
@@ -368,6 +368,7 @@ progress[value]::-moz-progress-bar {
 }
 .footer__nav i{
     font-size: 2rem;
+    color: #fff;
 }
 .footer__nav small{
     margin-top: 5%;

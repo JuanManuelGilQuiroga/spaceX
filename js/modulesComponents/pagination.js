@@ -134,8 +134,7 @@ const getCapsulesId = async(e)=>{
 
     let Capsule = await getAllCapsulesId(e.target.id)
 
-    await nameRockets("Capsule")
-    await imagen("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEbt7vhhz3j_19auW2HorH1zwfVpfmaQx2IjoKDlbWf7kLqfVSjOpwwf_OWyzXNCSnJKo&usqp=CAU")
+    await nameRockets(Capsule.type)
     await informationCapsules1(Capsule.id, Capsule.type, Capsule.last_update)
     await informationCapsules2(Capsule.serial, Capsule.water_landings, Capsule.status)
 }
